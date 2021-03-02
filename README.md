@@ -11,6 +11,9 @@ Azure Application Configurtaion Demo is a resource that I created one late night
 
 [Using Multiple Envornments in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-5.0)
 
+[Managed identities to access app config](https://docs.microsoft.com/en-gb/azure/azure-app-configuration/howto-integrate-azure-managed-service-identity?tabs=core3x#use-a-managed-identity)
+
+
 ## more resources, but not used yet
 [Dynamic updates using a Poll method](https://docs.microsoft.com/en-us/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core?tabs=core5x)
 [Dynamic updates using a push model and Event Hubs](https://docs.microsoft.com/en-us/azure/azure-app-configuration/enable-dynamic-configuration-dotnet-core-push-refresh)
