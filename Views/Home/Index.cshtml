@@ -1,8 +1,21 @@
-﻿@{
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+ 
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    body {
+        background-color: @Configuration["AppDemo:BackgroundColour"]
+    }
+    h1 {
+        color: @Configuration["AppDemo:FontColour"];
+        font-size: @Configuration["AppDemo:FontSize"]px;
+    }
+    }
+</style>
+
+<h1>
+    @Configuration["AppDemo:Message"]
+</h1>
