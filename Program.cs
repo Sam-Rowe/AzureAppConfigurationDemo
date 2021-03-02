@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -24,7 +25,11 @@ namespace AppConfigDemo
                         var settings = config.Build();
                         var connection = settings.GetConnectionString("AppConfig");
                         config.AddAzureAppConfiguration(options =>
-                            options.Connect(connection).UseFeatureFlags());
+                            options
+                            .Connect(connection)
+                            .Select(KeyFilter.Any, LabelFilter.Null)
+                            .Select(KeyFilter.Any, Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"))
+                            .UseFeatureFlags());
                     }).UseStartup<Startup>());
     }
 }
