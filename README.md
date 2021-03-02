@@ -1,5 +1,20 @@
 Azure Application Configurtaion Demo is a resource that I created one late night to play with and demo using Azure Application Config.
 
+Current features:
+
+- Config read from Azure App Config in dev on local machine
+- Config read from Azure App Config on App Service in container using Managed Identity
+	- Enable Managed Identity by using Evnironment variable AZURE_MANAGED_IDENTITY
+- Feature Flag read from Feature managment 
+- Config uses labels based on ASPNETCORE_ENVIRONMENT to set different values for font, background colour and text message
+
+Features outstanding:
+
+- Using KeyVault pass through
+- Feature Flag filtering on browser 
+- Feature Flag filtering on user/group 
+
+
 
 
 # Resource links
